@@ -2,7 +2,6 @@ package study.advanced.app.v3;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import study.advanced.trace.TraceId;
 import study.advanced.trace.TraceStatus;
 import study.advanced.trace.logtrace.LogTrace;
 
@@ -10,7 +9,7 @@ import study.advanced.trace.logtrace.LogTrace;
 @RequiredArgsConstructor
 public class OrderRepositoryV3 {
     private final LogTrace trace;
-    public void save(TraceId traceId, String itemId) {
+    public void save(String itemId) {
         TraceStatus status = null;
         try {
             status =trace.begin("OrderRepository.save()");
