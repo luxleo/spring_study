@@ -31,4 +31,5 @@
     해결하는 방법은 동적프록시를 이용하는 것이다.
 
 # PatternMatchUtils.simpleMatch(PATTERNS, target)
-    
+    패턴 일치를 쉽게 판가름 할 수 있다.
+# ProxyFactory -> Advice + MethodInvocation을 이용하여 동적으로 JdkDynamicProxy, CGLIB 판단한다.
